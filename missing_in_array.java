@@ -1,3 +1,4 @@
+1.Solution
 class Solution {
     int missingNum(int arr[]) {
         // code here
@@ -13,5 +14,20 @@ class Solution {
             }
         }
         return count ;
+    }
+}
+
+2.Solution
+    class Solution {
+    int missingNum(int arr[]) {
+        // code here
+        long sum = 0 ;
+        for(int i = 0 ; i < arr.length ; i++){
+            sum += arr[i];
+        }
+        long n = arr.length+1;
+        long actual = n*(n+1) / 2;
+        long ans = actual - sum ;
+        return (int)ans;
     }
 }
